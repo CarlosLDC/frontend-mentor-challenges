@@ -1,0 +1,138 @@
+@font-face {
+    font-weight: 800;
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Figtree Extra Bold';
+}
+
+@font-face {
+    font-weight: 500;
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Figtree Medium';
+}
+
+:root {
+    --color-yellow: #F4D043;
+    --color-gray-950: #111111;
+    --color-gray-500: #6B6B6B;
+    --color-white: #FFFFFF;
+
+    --font-family-extra-bold: 'Figtree Extra Bold', sans-serif;
+    --font-family-medium: 'Figtree Medium', sans-serif;
+
+    --spacing-24: 24px;
+    --spacing-12: 12px;
+    --spacing-8: 8px;
+    --spacing-4: 4px;
+
+    --font-size-large: 24px;
+    --font-size-medium: 16px;
+    --font-size-small: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#FONT-FAMILY-EXTRA-BOLD,
+.card__tag,
+.card__title,
+.card__profile-name {
+    font-family: var(--font-family-extra-bold);
+}
+
+#FONT-FAMILY-MEDIUM,
+.card__date,
+.card__text {
+    font-family: var(--font-family-medium);
+}
+
+#FONT-SIZE-LARGE,
+.card__title {
+    font-size: var(--font-size-large);
+}
+
+#FONT-SIZE-MEDIUM,
+.card__text {
+    font-size: var(--font-size-medium);
+}
+
+#FONT-SIZE-SMALL,
+.card__tag,
+.card__date {
+    font-size: var(--font-size-small);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background-color: var(--color-yellow);
+    height: 100vh;
+}
+
+.card {
+    align-content: center;
+    box-shadow: 6px 6px 0 var(--color-gray-950);
+    border: 1px solid var(--color-gray-950);
+    border-radius: 15px;
+    background-color: var(--color-white);
+    padding: var(--spacing-24);
+    max-width: 384px;
+    overflow: hidden;
+}
+
+.card__image {
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card__image ~ * {
+    margin-top: var(--spacing-24);
+}
+
+.card__tag {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: var(--color-yellow);
+    padding: var(--spacing-8) var(--spacing-12);
+    font-family: var(--font-family-extra-bold);
+}
+
+.card__tag ~ * {
+    margin-top: var(--spacing-12);
+}
+
+.card__text {
+    color: var(--color-gray-500);
+    line-height: var(--spacing-24);
+}
+
+.card__footer > * {
+    vertical-align: middle;
+}
+
+.card__profile-picture {
+    max-width: 32px;
+}
+
+.card__profile-name {
+    display: inline-block;
+    padding-left: var(--spacing-8);
+    font-size: 14px; /*Constant*/
+}
+
+@media (max-width: 600px) {
+    :root {
+        --font-size-large: 20px;
+        --font-size-medium: 14px;
+        --font-size-small: 12px;
+    }
+
+    .card {
+        max-width: 327px;
+    }
+}
