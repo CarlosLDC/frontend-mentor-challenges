@@ -21,7 +21,7 @@
 
 :root {
     /* Card Width */
-    --card-width-small: 350px;
+    --card-width-small: 325px;
     --card-width-medium: 400px;
 
     /* Colors */
@@ -43,8 +43,8 @@
     --font-size-large: 24px;
 
     /* Spacing */
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
+    --spacing-small: 6px;
+    --spacing-medium: 12px;
     --spacing-large: 24px;
     --spacing-extra-large: 36px;
 
@@ -53,7 +53,7 @@
     --border-radius-round: 50%;
 
     /* Image Size */
-    --user-photo-medium: 75px;
+    --user-photo-medium: 90px;
 }
 
 * {
@@ -67,6 +67,7 @@
 }
 
 body {
+    display: grid;
     align-content: center;
     justify-items: center;
     height: 100vh;
@@ -78,6 +79,7 @@ body {
 }
 
 .card {
+    display: grid;
     justify-items: center;
     border-radius: var(--border-radius-medium);
     padding: var(--spacing-extra-large);
@@ -126,9 +128,10 @@ body {
     border-radius: var(--border-radius-medium);
     padding: var(--spacing-medium);
     width: 100%;
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-semi-bold);
     font-size: var(--font-size-small);
     text-align: center;
+    text-decoration: none;
 }
 
 .card__link:first-of-type {
@@ -154,6 +157,13 @@ body {
 }
 
 @media (max-width: 600px) {
+    :root {
+        /* Font Size */
+        --font-size-small: 12px;
+        --font-size-medium: 16px;
+        --font-size-large: 20px;
+    }
+
     .card {
         width: var(--card-width-small);
     }
