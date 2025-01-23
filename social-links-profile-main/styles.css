@@ -1,0 +1,160 @@
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/static/Inter-Regular.ttf') format('truetype');
+    font-family: 'Inter';
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 600;
+    src: url('assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+    font-family: 'Inter';
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/fonts/static/Inter-Bold.ttf') format('truetype');
+    font-family: 'Inter';
+}
+
+:root {
+    /* Card Width */
+    --card-width-small: 300px;
+    --card-width-medium: 350px;
+
+    /* Colors */
+    --color-green: hsl(75, 94%, 57%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey-700: hsl(0, 0%, 20%);
+    --color-grey-800: hsl(0, 0%, 12%);
+    --color-grey-900: hsl(0, 0%, 8%);
+
+    /* Typography */
+    --font-family: 'Inter', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+
+    /* Font Size */
+    --font-size-small: 12px;
+    --font-size-medium: 16px;
+    --font-size-large: 20px;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-extra-large: 32px;
+
+    /* Borders */
+    --border-radius-medium: 8px;
+    --border-radius-round: 50%;
+
+    /* Image Size */
+    --user-photo-medium: 100px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:is(.card__username, .card__description) {
+    margin-top: var(--spacing-large);
+}
+
+body {
+    align-content: center;
+    justify-items: center;
+    height: 100vh;
+    font-family: var(--font-family);
+}
+
+.theme-dark {
+    background-color: var(--color-grey-900);
+}
+
+.card {
+    justify-items: center;
+    border-radius: var(--border-radius-medium);
+    padding: var(--spacing-extra-large);
+    width: var(--card-width-medium);
+}
+
+.card--dark {
+    background-color: var(--color-grey-800);
+}
+
+.card__image {
+    border-radius: var(--border-radius-round);
+    width: var(--user-photo-medium);
+}
+
+.card__username {
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-large);
+}
+
+.card__username--light {
+    color: var(--color-white);
+}
+
+.card__location {
+    margin-top: var(--spacing-small);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-small);
+}
+
+.card__location--green {
+    color: var(--color-green);
+}
+
+.card__description {
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-small);
+}
+
+.card__description--light {
+    color: var(--color-white);
+}
+
+.card__link {
+    display: block;
+    border-radius: var(--border-radius-medium);
+    padding: var(--spacing-medium);
+    width: 100%;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-small);
+    text-align: center;
+}
+
+.card__link:first-of-type {
+    margin-top: var(--spacing-large);
+}
+
+.card__link+.card__link {
+    margin-top: var(--spacing-medium);
+}
+
+.card__link--dark {
+    background-color: var(--color-grey-700);
+    color: var(--color-white);
+}
+
+.card__link--dark:hover {
+    background-color: var(--color-green);
+    color: var(--color-grey-700)
+}
+
+.card__link--dark:active {
+    color: var(--link-active-color);
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: var(--card-width-small);
+    }
+}
