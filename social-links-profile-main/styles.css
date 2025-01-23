@@ -21,8 +21,8 @@
 
 :root {
     /* Card Width */
-    --card-width-small: 300px;
-    --card-width-medium: 350px;
+    --card-width-small: 350px;
+    --card-width-medium: 400px;
 
     /* Colors */
     --color-green: hsl(75, 94%, 57%);
@@ -38,22 +38,22 @@
     --font-weight-bold: 700;
 
     /* Font Size */
-    --font-size-small: 12px;
-    --font-size-medium: 16px;
-    --font-size-large: 20px;
+    --font-size-small: 15px;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
 
     /* Spacing */
     --spacing-small: 8px;
     --spacing-medium: 16px;
     --spacing-large: 24px;
-    --spacing-extra-large: 32px;
+    --spacing-extra-large: 36px;
 
     /* Borders */
     --border-radius-medium: 8px;
     --border-radius-round: 50%;
 
     /* Image Size */
-    --user-photo-medium: 100px;
+    --user-photo-medium: 75px;
 }
 
 * {
