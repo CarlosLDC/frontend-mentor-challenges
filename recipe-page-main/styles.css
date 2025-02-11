@@ -1,0 +1,434 @@
+@font-face {
+    font-style: normal;
+    font-weight: 100 900;
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Outfit';
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-family: 'Young Serif';
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+
+    --brown-800: hsl(14, 45%, 36%);
+
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 64px;
+
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+
+    --letter-spacing-tight: -0.05em;
+    --letter-spacing-normal: 0em;
+    --letter-spacing-wide: 0.05em;
+    --letter-spacing-wider: 0.1em;
+    --letter-spacing-widest: 0.2em;
+
+    --font-size-xxs: 10px;
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Line height */
+p {
+    line-height: var(--space-md);
+}
+
+/* Margin top */
+img~* {
+    margin-top: var(--space-sm);
+}
+
+h3~* {
+    margin-top: var(--space-sm);
+}
+
+/* Font families*/
+.font-outfit-regular {
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+}
+
+.font-outfit-semibold {
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+}
+
+.font-outfit-bold {
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+}
+
+.font-young-serif {
+    font-family: 'Young Serif', serif;
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Font sizes */
+.font-size-xxs {
+    font-size: var(--font-size-xxs);
+}
+
+.font-size-xs {
+    font-size: var(--font-size-xs);
+}
+
+.font-size-sm {
+    font-size: var(--font-size-sm);
+}
+
+.font-size-md {
+    font-size: var(--font-size-md);
+}
+
+.font-size-lg {
+    font-size: var(--font-size-lg);
+}
+
+.font-size-xl {
+    font-size: var(--font-size-xl);
+}
+
+.font-size-xxl {
+    font-size: var(--font-size-xxl);
+}
+
+/* Margin */
+.margin-xxs {
+    margin: var(--space-xxs);
+}
+
+.margin-xs {
+    margin: var(--space-xs);
+}
+
+.margin-sm {
+    margin: var(--space-sm);
+}
+
+.margin-md {
+    margin: var(--space-md);
+}
+
+.margin-lg {
+    margin: var(--space-lg);
+}
+
+.margin-xl {
+    margin: var(--space-xl);
+}
+
+.margin-xxl {
+    margin: var(--space-xxl);
+}
+
+/* Padding */
+.padding-xxs {
+    padding: var(--space-xxs);
+}
+
+.padding-xs {
+    padding: var(--space-xs);
+}
+
+.padding-sm {
+    padding: var(--space-sm);
+}
+
+.padding-md {
+    padding: var(--space-md);
+}
+
+.padding-lg {
+    padding: var(--space-lg);
+}
+
+.padding-xl {
+    padding: var(--space-xl);
+}
+
+.padding-xxl {
+    padding: var(--space-xxl);
+}
+
+/* Rounded Corners */
+.border-rounded-sm {
+    border-radius: var(--border-radius-sm);
+}
+
+.border-rounded-md {
+    border-radius: var(--border-radius-md);
+}
+
+.border-rounded-lg {
+    border-radius: var(--border-radius-lg);
+}
+
+/* Display */
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+/* Text alignment */
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* Width */
+.w-10 {
+    width: 10%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-auto {
+    width: auto;
+}
+
+/* Height */
+.h-10 {
+    height: 10%;
+}
+
+.h-25 {
+    height: 25%;
+}
+
+.h-50 {
+    height: 50%;
+}
+
+.h-75 {
+    height: 75%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.h-auto {
+    height: auto;
+}
+
+/* Background Colors */
+.bg-white {
+    background-color: var(--white);
+}
+
+.bg-stone-100 {
+    background-color: var(--stone-100);
+}
+
+.bg-stone-150 {
+    background-color: var(--stone-150);
+}
+
+.bg-stone-600 {
+    background-color: var(--stone-600);
+}
+
+.bg-stone-900 {
+    background-color: var(--stone-900);
+}
+
+.bg-brown-800 {
+    background-color: var(--brown-800);
+}
+
+.bg-rose-800 {
+    background-color: var(--rose-800);
+}
+
+.bg-rose-50 {
+    background-color: var(--rose-50);
+}
+
+/* Text Colors */
+.text-white {
+    color: var(--white);
+}
+
+.text-stone-100 {
+    color: var(--stone-100);
+}
+
+.text-stone-150 {
+    color: var(--stone-150);
+}
+
+.text-stone-600 {
+    color: var(--stone-600);
+}
+
+.text-stone-900 {
+    color: var(--stone-900);
+}
+
+.text-brown-800 {
+    color: var(--brown-800);
+}
+
+.text-rose-800 {
+    color: var(--rose-800);
+}
+
+.text-rose-50 {
+    color: var(--rose-50);
+}
+
+/* Centering */
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+/* Bullet color */
+.bullet-stone-100 li::marker {
+    color: var(--stone-100);
+}
+
+.bullet-stone-150 li::marker {
+    color: var(--stone-150);
+}
+
+.bullet-stone-600 li::marker {
+    color: var(--stone-600);
+}
+
+.bullet-stone-900 li::marker {
+    color: var(--stone-900);
+}
+
+.bullet-brown-800 li::marker {
+    color: var(--brown-800);
+}
+
+.bullet-rose-800 li::marker {
+    color: var(--rose-800);
+}
+
+.bullet-rose-50 li::marker {
+    color: var(--rose-50);
+}
+
+/* List styles */
+ol {
+    padding-left: var(--space-sm);
+}
+
+ol li::marker {
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+}
+
+ul {
+    padding-left: var(--space-sm);
+    list-style-type: disc;
+}
+
+ul li::marker {
+    font-size: var(--font-size-xxs);
+}
+
+li {
+    padding-left: var(--space-md);
+}
+
+li:not(:first-child) {
+    padding-top: var(--space-sm);
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tr {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    width: auto;
+}
+
+table,
+th,
+td {
+    padding: var(--space-sm);
+}
+
+/* Divider styles */
+hr {
+    border: 0.1px solid var(--stone-150);
+    margin-top: var(--space-md);
+    height: 0;
+}
+
+/* Layout */
+@media (min-width: 320px) {}
+
+@media (min-width: 375px) {}
+
+@media (min-width: 1440px) {}
