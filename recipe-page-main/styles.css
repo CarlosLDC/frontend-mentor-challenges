@@ -388,7 +388,7 @@ ul {
 }
 
 ul li::marker {
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-xs);
 }
 
 li {
