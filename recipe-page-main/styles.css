@@ -59,6 +59,11 @@
     padding: 0;
 }
 
+/* Margin main content */
+main {
+    margin: var(--space-xxl) 0;
+}
+
 /* Line height */
 p {
     line-height: var(--space-md);
